@@ -38,7 +38,7 @@ Ubuntu 18.04 and ROS Melodic
     ```
     ssh roboticlabquad-Precision-3640-Tower
     export ROS_MASTER_URI=http://192.168.1.172:11311
-    cd jun_DigitalTwin_ws/dt_test/src/dt_test_pkg/scripts
+    cd jun_DigitalTwin_ws/dt_test/src/ma_dt_quadrotor/scripts
     ./mavlink_shell_simulation.py 127.0.0.1:14445
     ```
 
@@ -47,10 +47,10 @@ Ubuntu 18.04 and ROS Melodic
     ```
     ssh roboticlabquad-Precision-3640-Tower
     cd ~/dt_test 
-    script src/dt_test_pkg/ref/logfile.txt
+    script src/ma_dt_quadrotor/ref/logfile.txt
     export ROS_MASTER_URI=http://192.168.1.172:11311
     source devel/setup.bash
-    roslaunch dt_test_pkg default.launch
+    roslaunch ma_dt_quadrotor default.launch
     ```
 
 5. companion computer 
