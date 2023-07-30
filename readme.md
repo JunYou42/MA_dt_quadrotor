@@ -13,7 +13,10 @@ Ubuntu 20.04 and ROS Noetic
 Ubuntu 18.04 and ROS Melodic
 
 # Usage
-0. create a catkin workspace download the package and install dependencies, compile the package with ```catkin build```
+0. install pkg
+    - create a catkin workspace with ```mkdir -p catkin_ws/src```
+    - clone the package with ```git clone https://github.com/JunYou42/MA_dt_quadrotor.git``` and install dependencies
+    - ompile the package with ```catkin build```
 1. connect to drone
 
     - WINDOWS: open Vicon system -> select DIYDRONE
@@ -38,7 +41,7 @@ Ubuntu 18.04 and ROS Melodic
     ```
     ssh roboticlabquad-Precision-3640-Tower
     export ROS_MASTER_URI=http://192.168.1.172:11311
-    cd jun_DigitalTwin_ws/dt_test/src/ma_dt_quadrotor/scripts
+    cd jun_DigitalTwin_ws/dt_test/src/dt_test_pkg/scripts
     ./mavlink_shell_simulation.py 127.0.0.1:14445
     ```
 
@@ -47,10 +50,10 @@ Ubuntu 18.04 and ROS Melodic
     ```
     ssh roboticlabquad-Precision-3640-Tower
     cd ~/dt_test 
-    script src/ma_dt_quadrotor/ref/logfile.txt
+    script src/dt_test_pkg/ref/logfile.txt
     export ROS_MASTER_URI=http://192.168.1.172:11311
     source devel/setup.bash
-    roslaunch ma_dt_quadrotor default.launch
+    roslaunch dt_test_pkg default.launch
     ```
 
 5. companion computer 
