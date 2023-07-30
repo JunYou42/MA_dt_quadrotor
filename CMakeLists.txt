@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(dt_test_pkg)
+project(MA_dt_quadrotor)
 
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
@@ -34,7 +34,7 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES dt_test_pkg
+  LIBRARIES MA_dt_quadrotor
   CATKIN_DEPENDS geometry_msgs mavros roscpp rospy sensor_msgs std_msgs std_srvs
   DEPENDS system_lib
 )
