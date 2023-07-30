@@ -1,4 +1,4 @@
-#include <MA_dt_quadrotor/ControlEval.h>
+#include <ma_dt_quadrotor/ControlEval.h>
 #include "dynamic_model_quad.cpp"
 
 class DigitalTwin
@@ -13,7 +13,7 @@ protected:
 
     mavros_msgs::State  current_state;
     geometry_msgs::Pose current_pose;
-    MA_dt_quadrotor::Wind   current_wind;
+    ma_dt_quadrotor::Wind   current_wind;
 
     ros::Subscriber pose_sub;
     ros::Subscriber wind_sub;
@@ -84,7 +84,7 @@ public:
 
     }
 
-    void windCallBack(const MA_dt_quadrotor::Wind::ConstPtr& msg){
+    void windCallBack(const ma_dt_quadrotor::Wind::ConstPtr& msg){
         current_wind = *msg;
         // ROS_INFO_STREAM("[windCallBack] Get wind data.");
 

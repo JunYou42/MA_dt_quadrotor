@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include <termios.h>
 #include <std_msgs/UInt16.h>
-#include <MA_dt_quadrotor/Wind.h>
+#include <ma_dt_quadrotor/Wind.h>
 
 
 
@@ -34,10 +34,10 @@ int main(int argc, char **argv)
     ros::Rate rate(2.0);
 
     // create sensor msg
-    dt_test_pkg::Wind current_wind;
+    ma_dt_quadrotor::Wind current_wind;
 
     // create topic handle
-    ros::Publisher wind_pub = nh.advertise<dt_test_pkg::Wind>("/environment/wind", 10);
+    ros::Publisher wind_pub = nh.advertise<ma_dt_quadrotor::Wind>("/environment/wind", 10);
 
 
 

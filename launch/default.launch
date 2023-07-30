@@ -1,16 +1,16 @@
 <launch>
 
 
-  <!-- <node pkg="dt_test_pkg" type="environment" name="environment_launch" output="screen"  /> -->
-  <node pkg="dt_test_pkg" type="digital_twin" name="digital_twin_launch"   output="screen" />
+  <!-- <node pkg="ma_dt_quadrotor" type="environment" name="environment_launch" output="screen"  /> -->
+  <node pkg="ma_dt_quadrotor" type="digital_twin" name="digital_twin_launch"   output="screen" />
       <param name="ROSTOPIC_POSE_RAW" type="str" value="/mavros/local_position/pose" />
       <param name="ROSTOPIC_VEL_RAW" type="str" value="/mavros/local_position/velocity_local" />
       <param name="ROSTOPIC_STATE_RAW" type="str" value="/mavros/state" />
 
   
-  <node pkg="dt_test_pkg" type="physical_entity" name="physical_entity_launch"  output="screen" /> 
+  <node pkg="ma_dt_quadrotor" type="physical_entity" name="physical_entity_launch"  output="screen" /> 
  
-  <node pkg="dt_test_pkg" type="control_eval.py" name="service_launch" output="screen" /> 
+  <node pkg="ma_dt_quadrotor" type="control_eval.py" name="service_launch" output="screen" /> 
 
 
 </launch>

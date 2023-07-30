@@ -18,7 +18,7 @@
 #include <geometry_msgs/Twist.h>
 #include <std_msgs/Float32MultiArray.h>
 // LOCAL
-#include <MA_dt_quadrotor/Wind.h>
+#include <ma_dt_quadrotor/Wind.h>
 
 using namespace Eigen;
 
@@ -188,7 +188,7 @@ public:
 
     }
 
-    void windCallBack(const dt_test_pkg::Wind::ConstPtr& msg){
+    void windCallBack(const ma_dt_quadrotor::Wind::ConstPtr& msg){
         current_wind = Vector3f(msg->wind_x,
                                 msg->wind_y,
                                 msg->wind_z);
