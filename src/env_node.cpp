@@ -4,13 +4,10 @@
     1. read data source from Peetbrother weather station 800 RS232 i/o port
     2. publish relavant environemental ROS topics
    
-
 */
 
 #include <ros/ros.h>
 #include <cmath>
-// LOCAL
-#include <dt_test_pkg/Wind.h>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -18,6 +15,8 @@
 #include <fcntl.h>
 #include <termios.h>
 #include <std_msgs/UInt16.h>
+#include <dt_test_pkg/Wind.h>
+
 
 
 int hexToDecimal(const std::string& hexValue) {
@@ -147,7 +146,7 @@ int main(int argc, char **argv)
             // current_wind.wind_z = 0;
             // // ROS_INFO_STREAM("\n WIND SPEED original: "<< hexValues << " | WIND DIRECTION: original " << hexValues_direction);
 
-            // TODO: ONLY FOR TEST
+            // ONLY FOR TEST
             current_wind.wind_x = 0;
             current_wind.wind_y = 2;
             current_wind.wind_z = 0;

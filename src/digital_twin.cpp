@@ -92,14 +92,14 @@ public:
 
     //------------------------ main loop ------------------------//
 
-    void offboardSendTargetPose(){
-        ROS_INFO_STREAM("[offboardSendTargetPose] Start main task.");
+    void main_loop(){
+        ROS_INFO_STREAM("[main_loop] Start main task.");
         int display_count = 0;
         
 
         ros::Rate rate(20.0); // setpoint frequency must be faster than 20HZ
 
-         geometry_msgs::PoseStamped pose;
+        geometry_msgs::PoseStamped pose;
         pose.pose.position.x = 6;
         pose.pose.position.y = 0;
         pose.pose.position.z = 1;
@@ -119,7 +119,7 @@ public:
 
         while(ros::ok()){
           
-            // update dynamic mdoelpose
+            // update dynamic model
             if( display_count % 10 == 0){
                 _dynamic_model_quad.updateModelParameters();
                 _dynamic_model_quad.updateForceandMoment();
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
     DigitalTwin digital_drone;
     ROS_INFO_STREAM("[MAIN] Object of DigitalTwin i[MAIN] Object of DigitalTwin is built. The digital twin of drone starts updating data."); 
 
-    digital_drone.offboardSendTargetPose();
+    digital_drone.main_loop();
   
     return 0;
 }

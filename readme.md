@@ -1,6 +1,5 @@
 # Description
-This ROS package provide a simple demo for realize Digital Twin in my Master thesis on the topic: Environmental-aware control architecture for safety-critical cyber-physical  systems -- A case study for quadrotor via Digital Twin. 
-It is cleaned out of simplicity and clearance. More code can be found in this page xxx.
+This ROS package provide a simple demo for realize Digital Twin in my Master thesis on the topic: Environmental-aware control architecture for safety-critical cyber-physical systems -- A case study for quadrotor via Digital Twin. 
 
 # Main documents
 1. src/digital_twin.cpp: create a node of "twin_node", this script creates an object of class DigitalTwin which can include multiple digital models. in the project, it contains an object of class QuadDynamicModel defined in src/dynamic_model_quad.cpp. 
@@ -14,7 +13,7 @@ Ubuntu 20.04 and ROS Noetic
 Ubuntu 18.04 and ROS Melodic
 
 # Usage
-0. download the package and install dependencies, compile the package with ```catkin build```
+0. create a catkin workspace download the package and install dependencies, compile the package with ```catkin build```
 1. connect to drone
 
     - WINDOWS: open Vicon system -> select DIYDRONE
